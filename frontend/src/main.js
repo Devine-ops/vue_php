@@ -1,6 +1,8 @@
-import './assets/main.css'
+import { createApp } from 'vue';
+import App from './App.vue';
+import store from '../src/components/store';  // Certifique-se de importar corretamente a store
 
-import { createApp } from 'vue'
-import App from './App.vue'
+createApp(App)
+  .use(store)  // Registrar o Vuex
+  .mount('#app');
 
-createApp(App).mount('#app')
